@@ -1,0 +1,11 @@
+{
+  "name" : "poker-hands-display",
+  "version" : "0.0.1",
+  "main" : "package.js",
+  "scripts" : {
+    "start" : "node package.js"
+  },
+  "engines" : {
+    "node" : "^10"
+  }
+}
