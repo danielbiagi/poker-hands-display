@@ -45,7 +45,7 @@ fs.readFile('./index.html', function (err, html) {
 	maos = adicionaMao("#3", "Four of a Kind", "7 ♦  7 ♣  7 ♥  7 ♠  10 ♥", "4 cartas iguais de cada naipe.");
         maos = adicionaMao("#4", "Full House", "K ♦  K ♥  K ♠  J ♥  J ♦", "Um par + uma trinca.");
 	maos = adicionaMao("#5", "Flush", "K ♠  7 ♠  6 ♠  2 ♠  A ♠", "5 cartas do msm naipe.");
-	maos = adicionaMao(#6", "Straight", "10 ♦  9 ♠  8 ♥  7 ♠  6 ♠", "5 cartas na sequência numérica.");
+	maos = adicionaMao("#6", "Straight", "10 ♦  9 ♠  8 ♥  7 ♠  6 ♠", "5 cartas na sequência numérica.");
 	maos = adicionaMao("#7", "Three of a Kind", "K ♦  K ♥  K ♣  J ♥  2 ♣", "Trinca");
 	maos = adicionaMao("#8", "Two Pair", "A ♥  A ♠  4 ♦  4 ♥  Q ♦", "Dois pares");
 	maos = adicionaMao("#9", "One Pair", "5 ♠  5 ♣  Q ♥  8 ♣  7 ♣", "Um par");	     
