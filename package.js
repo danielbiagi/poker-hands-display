@@ -30,7 +30,6 @@ function adicionaMao(seq, novaMao, exemplo, descricao)
 
 var http = require('http'),
     fs = require('fs'),
-    maos = "";
 
 fs.readFile('./index.html', function (err, html) {
     if (err) {
@@ -40,6 +39,7 @@ fs.readFile('./index.html', function (err, html) {
      http.createServer(function (req, res) {
 	res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
         res.write(html);  
+	var maos = "";
 	maos = adicionaMao("#1", "Royal Flush", "10 ♥  J ♥  Q ♥  K ♥  A ♥", "melhor mão do poker!");
 	maos = adicionaMao("#2", "Straight Flush", "4 ♣  5 ♣  6 ♣  7 ♣  8 ♣", "5 cartas na sequência, todas do msm naipe.");
 	maos = adicionaMao("#3", "Four of a Kind", "7 ♦  7 ♣  7 ♥  7 ♠  10 ♥", "4 cartas iguais de cada naipe.");
@@ -50,7 +50,8 @@ fs.readFile('./index.html', function (err, html) {
 	maos = adicionaMao("#8", "Two Pair", "A ♥  A ♠  4 ♦  4 ♥  Q ♦", "Dois pares");
 	maos = adicionaMao("#9", "One Pair", "5 ♠  5 ♣  Q ♥  8 ♣  7 ♣", "Um par");	     
 	maos = adicionaMao("#10", "High Card", "K ♥  Q ♦  7 ♦  3 ♣  2 ♥", "Carta alta");	
-	var r = maos.concat("</body>", "</html>");
+	var r = "";
+	    r = maos.concat("</body>", "</html>");
 	res.end(r);
 	
 }).listen(process.env.PORT, '0.0.0.0');
