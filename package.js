@@ -1,33 +1,3 @@
-
-/*var promise1 = new Promise(function(resolve, reject) {
-  setTimeout(function() {
-    resolve('foo');
-  }, 100);
-});
-
-promise1.then(function(value) {
-  console.log(value);
-  // expected output: "foo"
-});
-
-console.log(promise1);
-// expected output: [object Promise]
-
-
-promise1.then(function(value) {
-  console.log(value);
-  // expected output: "foo"
-});*/
-function adicionaMao(seq, novaMao, exemplo, descricao) 
-{
-	var re = "";
-	re = re.concat("<tr><td>", seq, "</td>");
-	re = re.concat("<td>", novaMao, "</td>");
-	re = re.concat("<td>", exemplo, "</td>");
-	re = re.concat("<td>", descricao, "</td></tr>");
-	return re;
-}
-
 var http = require('http'),
     fs = require('fs');
 
@@ -50,10 +20,19 @@ fs.readFile('./index.html', function (err, html) {
 	maos = maos.concat(adicionaMao("#8", "Two Pair", "A ♥  A ♠  4 ♦  4 ♥  Q ♦", "Dois pares"));
 	maos = maos.concat(adicionaMao("#9", "One Pair", "5 ♠  5 ♣  Q ♥  8 ♣  7 ♣", "Um par"));	     
 	maos = maos.concat(adicionaMao("#10", "High Card", "K ♥  Q ♦  7 ♦  3 ♣  2 ♥", "Carta alta"));	
-	var r = "";
-	    r = maos.concat("</body>", "</html>");
+	var r = maos.concat("</table>", </div>", "</body>", "</html>");
 	res.end(r);
 	
 }).listen(process.env.PORT, '0.0.0.0');
 });
-console.log('Server running on port 8080.')
+console.log('Servidor rodando na porta: ' + process.env.PORT);
+
+function adicionaMao(seq, novaMao, exemplo, descricao) 
+{
+	var re = "";
+	re = re.concat("<tr><td>", seq, "</td>");
+	re = re.concat("<td>", novaMao, "</td>");
+	re = re.concat("<td>", exemplo, "</td>");
+	re = re.concat("<td>", descricao, "</td></tr>");
+	return re;
+}
