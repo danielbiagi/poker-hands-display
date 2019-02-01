@@ -20,7 +20,7 @@ promise1.then(function(value) {
 });*/
 function adicionaMao(mao, novaMao) 
 {
-	var re = mao.concat("<p>", novaMao, "</p>);
+	var re = mao.concat("<p>", novaMao, "</p>");
 	return mao
 }
 
